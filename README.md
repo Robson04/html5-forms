@@ -1,2 +1,2 @@
-# html5-forms
-Description &amp; explanation all attributes and tags for form.
+# Opis i wytłumaczenie znaczników oraz atrybutów dla form w HTML5.
+
