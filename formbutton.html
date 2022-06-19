@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Formularze HTML5</title>
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="https://kit.fontawesome.com/45ba32cc64.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="container">
+      <header><h1>Formularze</h1></header>
+      <nav id="top-nav">
+        <ul>
+          <a href="index.html"><li>Początek z formularzem</li></a>
+          <a href="formbutton.html"><li>&#8226; Przyciski i elementy formularza</li></a>
+          <a href="attributes.html"><li>Pozostałe atrybuty</li></a>
+        </ul>
+      </nav>
+      <main>
+        <article>
+          <a name="pole_button"><h3>Pole BUTTON</h3></a>
+          <p>Pole <span class="text-red">BUTTON</span> służy do tworzenia w formularzu przycisków i jest definiowane za pomocą znacznika <span class="text-bold">&#60;button&#62;</span>. Ma podobne działanie jak znacznik <span class="text-bold">&#60;input&#62;</span>, który dla atrybutu <span class="text-red">type</span> przejmuje jedną z następujących wartości: <span class="text-red">button, reset</span> lub <span class="text-red">submit</span>.</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;button type="" name=""&#62;&#60;/button&#62;
+          </div>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;button type="submit" name="obrazek"&#62;<br />
+            <pre>   &#60;img src="obrazek.jpg" alt="formularz" /&#62;</pre>
+            &#60;/button&#62;
+          </div>
+          <p>Typy przycisków:</p>
+          <ul class="code-explain">
+            <li><span class="text-bold">type="submit"</span></li>
+            <li><span class="text-bold">type="reset"</span></li>
+            <li><span class="text-bold">type="button"</span></li>
+          </ul>
+        </article>
+        <article>
+          <a name="etykieta"><h3>Etykieta</h3></a>
+          <p>Opis pola, który wyświetla się na formularzu, nie jest związany z tym polem. Używając znacznika <span class="text-bold">&#60;label&#62;</span>, można związać tekst etykiety z polem, którego dotyczy opis.</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;label&#62;<br />
+            <pre>   &#60;input type="checkbox" name="nazwa" value="wartość" /&#62;<br />   Etykieta pola</pre>
+              &#60;/label&#62;
+          </div>
+          <p>lub</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;input type="checkbox" name="nazwa" value="wartość" id="pole" /&#62;<br />
+            &#60;label for="pole"&#62;Etykieta pola&#60;/label&#62;
+          </div>
+        </article>
+        <article>
+          <a name="grupowanie"><h3>Grupowanie elementów formularza</h3></a>
+          <p>Jeżeli projektowany formularz zawiera wiele powiązanych ze sobą elementów, można te elementy pogrupować za pomocą znacznika <span class="text-bold">&#60;fieldset&#62;</span>. Powinien się on znaleźć za znacznikiem <span class="text-bold">&#60;form&#62;</span>, ale przed znacznikami definiującymi poszczególne elementy. Stosując znacznik <span class="text-bold">&#60;legend&#62;</span>, można dodać tytuł dla pogrupowanych elementów.</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;fieldset&#62;<br />
+            <pre>   &#60;legend&#62;Tytuł&#60;/legend&#62;<br />   Definiowanie elementów grupy</pre>
+            &#60;/fieldset&#62;
+          </div>
+        </article>
+        <article>
+          <a name="pole_select"><h3>Pole SELECT</h3></a>
+          <p>Pole <span class="text-red">SELECT</span> służy do wyświetlania w formularzu listy wartości i zachęca do wybrania jednej lub kilku z nich. Jest definiowany przy użyciu znacznika <span class="text-bold">&#60;select&#62;</span> wewnątrz którego mogą wystąpić znaczniki <span class="text-bold">&#60;option&#62;</span>. Znacznik <span class="text-bold">&#60;select&#62;</span> definiuje listę, a poszczególne wartości tej listy są definiowane za pomocą znacznika <span class="text-bold">&#60;option&#62;</span></p>
+          <p>Definicja listy jest następująca:</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;select name="lista"&#62;<br />
+            <pre>   &#60;option&#62;Pierwszy element listy&#60;/option&#62;<br />   &#60;option&#62;Drugi element listy&#60;/option&#62;<br />   &#60;option&#62;Trzeci element listy&#60;/option&#62;</pre>
+            &#60;/select&#62;
+          </div>
+          <p>Dla znacznika <span class="text-bold">&#60;select&#62;</span> można użyć atrybutów:</p>
+          <ul class="code-explain">
+            <li><span class="text-bold">size="n"</span> - określa liczbę pozycji widocznych w polu SELECT. Jeżeli atrybut nie zostanie podany, to pole wyboru będzie działać z size="0" i użytkownik nie będzie mógł wybrać żadnej wartości z listy.</li>
+            <li><span class="text-bold">multiple</span> - można na liście zaznaczyć więcej niż jedną pozycję.</li>
+          </ul>
+          <p>Dla znacznika <span class="text-bold">&#60;option&#62;</span> można użyć atrybutów:</p>
+          <ul class="code-explain">
+            <li><span class="text-bold">selected</span> - pozycja, dla której został zdefiniowany ten atrybut, będzie automatycznie zaznaczona na liście. Jeżeli atrybut ten nie zostanie użyty, domyślnie będzie zaznaczany pierwszy element na liście.</li>
+            <li><span class="text-bold">value="wartość"</span> - określa wartość danej pozycji przekazywaną przez wysyłany formularz.</li>
+          </ul>
+        </article>
+        <article>
+          <a name="listy_zagniezdzone"><h3>Listy zagnieżdżone</h3></a>
+          <p>Stosując znaczniki <span class="text-bold">&#60;select&#62;</span> i <span class="text-bold">&#60;option&#62;</span>, definiujemy listę wartości. Zdefiniowanej liście można nadać strukturę wielopoziomową, tworząc podmenu dla każdej wartości listy. Do tego służy znacznik <span class="text-bold">&#60;optgroup&#62;</span> z atrybutem <span class="text-bold">label="tytuł grupy"</span>, gdzie <span class="text-red">tytuł grupy</span> to nazwa podmenu.</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;optgroup label="tytuł"&#62;<br />
+            <pre>   &#60;!-- lista wartości --&#62;</pre>
+            &#60;/optgroup&#62;
+          </div>
+          <p>Dla każdego podmenu należy utworzyć przy użyciu znacznika <span class="text-bold">&#60;option&#62;</span> oddzielną listę wartości i przed nim wstawić znacznik <span class="text-bold">&#60;optgroup&#62;</span></p>
+          <a href="img/1.png" target="_blank">Zobacz przykład</a>
+        </article>
+        <article>
+          <a name="pole_textarea"><h3>Pole TEXTAREA</h3></a>
+          <p>Do wprowadzenia w formularzu większej ilości tekstu można użyć pola <span class="text-red">TEXTAREA</span>, które definiujemy za pomocą znacznika <span class="text-bold">&#60;textarea&#62;</span>. Znacznik <span class="text-bold">&#60;textarea&#62;</span> może zawierać następujące atrybuty:</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;textarea name="nazwa" rows="0" cols="0"&#62;&#60;/textarea&#62;
+          </div>
+          <p>Tekst umieszczony pomiędzy znacznikami <span class="text-bold">&#60;textarea&#62;&#60;/textarea&#62;</span> będzie wyświetlany jako wartość domyślna widoczna w polu bezpośrednio po wczytaniu zawartości strony do przeglądarki.</p>
+          <ul class="code-explain">
+            <li><span class="text-bold">name="nazwa"</span> - nazwa przypisana do pola.</li>
+            <li><span class="text-bold">rows="n"</span> - liczba wierszy w polu tekstowym.</li>
+            <li><span class="text-bold">cols="n"</span> - liczba kolumn (znaków) w polu tekstowym.</li>
+          </ul>
+        </article>
+        <article>
+          <a name="pole_nieaktywne"><h3>Nieaktywne pola formularza</h3></a>
+          <p>Cały formularz można uczynić nieaktywnym poprzez zdefiniownie atrybutu <span class="text-red">disabled</span>. Można również dodać atrybut <span class="text-red">disabled</span> do dowolnego elementu formularza, sprawiając, że tylko ten element stanie się nieaktywny. Najlepsze efekty daje związanie atrybutu <span class="text-red">disabled</span> ze znacznikiem <span class="text-bold">&#60;input&#62;</span></p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;input disabled name="nazwisko" value="Podaj nazwisko" size="25" /&#62;
+          </div>
+          <p>Inną metoda może być uniemożliwienie wprowadzania zmian w polu przez użytkownika. Do tego służy atrybut <span class="text-red">readonly</span>, którego użycie spowoduje zablokowanie pola.</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;input readonly name="nazwisko" value="Podaj nazwisko" size="25" /&#62;
+          </div>
+          <p>Atrybut <span class="text-red">readonly</span> może być używany dla pól tekstowych, pól haseł, pól wyboru i bloków tekstu.</p>
+        </article>
+        <article>
+          <a name="klawisze_skrotow"><h3>Klawisze skrótów</h3></a>
+          <p>Do zdefiniowanych w formularzu elementów można przypisywać <span class="text-red">klawisze skrótów</span>. Zastosowanie kombinacji klawiszy spowoduje przejście do wybranego elemetnu. Do definiowania klawiszy skrótów służy atrybut <span class="text-red">accesskey</span> umieszczony w definicji elementu, którego będzie dotyczył.</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;input type="radio" value="Podstawowe" name="grupa_opcji" accesskey="P" /&#62;Podstawowe [skrót ALT+P]&#60;br /&#62;<br />
+            &#60;input type="radio" value="Średnie" name="grupa_opcji" accesskey="S" /&#62;Podstawowe [skrót ALT+S]&#60;br /&#62;<br />
+            &#60;input type="radio" value="Wyższe" name="grupa_opcji" accesskey="W" /&#62;Podstawowe [skrót ALT+W]&#60;br /&#62;
+          </div>
+        </article>
+        <article>
+          <a name="pole_datalist"><h3>Pole DATALIST</h3></a>
+          <p>Pole <span class="text-red">DATALIST</span> może służyć jako element autouzupełnienia wartości wprowadzonych w znaczniku <span class="text-bold">&#60;input&#62;</span>. Za pomocą znacznika <span class="text-bold">&#60;datalist&#62;</span> można zdefiniować predefiniowaną listę wartości. Po wybraniu pola tekstowego pojawi się lista rozwijana z wcześniej zdefiniowanymi wartościami.</p>
+          <p>Znacznik <span class="text-bold">&#60;datalist&#62;</span> musi być poprzedzony znacznikiem <span class="text-bold">&#60;input&#62;</span>. Wewnątrz znacznika <span class="text-bold">&#60;datalist&#62;</span> muszą wystąpić znaczniki <span class="text-bold">&#60;option&#62;</span>. Znacznik <span class="text-bold">&#60;datalist&#62;</span> definiuję listę, a poszczególne wartości tej listy są definiowane za pomocą znacznika <span class="text-bold">&#60;option&#62;</span>. Pełna definicja pola <span class="text-red">DATALIST</span> ma postać:</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;input list="nazwa lista" /&#62;<br />
+            &#60;datalist id="nazwa listy"&#62;
+            <pre>   &#60;option value="wartość1"&#62;&#60;/option&#62;<br />   &#60;option value="wartość2"&#62;&#60;/option&#62;<br />   &#60;option value="wartość3"&#62;&#60;/option&#62;<br /></pre>
+            &#60;/datalist&#62;
+          </div>
+        </article>
+      </main>
+      <aside>
+        <div id="right-nav-title">Spis treści</div>
+        <ul>
+          <a href="#pole_button"><li>Pole BUTTON</li></a>
+          <a href="#etykieta"><li>Etykieta</li></a>
+          <a href="#grupowanie"><li>Grupowanie elementów</li></a>
+          <a href="#pole_select"><li>Pole SELECT</li></a>
+          <a href="#listy_zagniezdzone"><li>Listy zagnieżdżone</li></a>
+          <a href="#pole_textarea"><li>Pole TEXTAREA</li></a>
+          <a href="#pole_nieaktywne"><li>Nieaktywne pola</li></a>
+          <a href="#klawisze_skrotow"><li>Klawisze skrótów</li></a>
+          <a href="#pole_datalist"><li>Pole DATALIST</li></a>
+        </ul>
+      </aside>
+      <div style="clear: both;"></div>
+      <footer>
+        <a href="https://github.com/robson04" target="_blank"><i class="fab fa-github"></i></a>
+        <br />
+        <p>&copy; 2021 Robson04 - Wszelkie prawa zastrzeżone.</p>
+      </footer>
+    </div>
+  </body>
+</html>

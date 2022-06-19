@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Formularze HTML5</title>
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="https://kit.fontawesome.com/45ba32cc64.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="container">
+      <header><h1>Formularze</h1></header>
+      <nav id="top-nav">
+        <ul>
+          <a href="index.html"><li>Początek z formularzem</li></a>
+          <a href="formbutton.html"><li>Przyciski i elementy formularza</li></a>
+          <a href="atributes.html"><li>&#8226; Pozostałe atrybuty</li></a>
+        </ul>
+      </nav>
+      <main>
+        <article>
+          <a name="autofocus"><h3>Atrybut autofocus</h3></a>
+          <p>Do automatycznego ustawienia kursora w wybranym polu formularza służy atrybut <span class="text-red">autofocus</span>. Ustawienie tego atrybutu, spowoduje, po uruchomieniu strony, automatyczne umieszczenie kursora w oznaczonym polu formularza.</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;input name="adres" type="text" autofocus /&#62;
+          </div>
+        </article>
+        <article>
+          <a name="autocomplete"><h3>Atrybut autocomplete</h3></a>
+          <p>Do wyłączania autouzupełnienia w wybranych polach lub w całym formularzu służy atrybut <span class="text-red">autocomplete</span>, przyjmujący wartość <span class="text-red">on</span> lub <span class="text-red">off</span>. Przeglądarki internetowe często automatycznie proponują uzupełnienie wybranego pola wartościami, które użytkownik wpisywał do tego pola wcześniej. Jeżeli użytkownik korzysta z ogólnie dostępnego komputera, to kolejny użytkownik może zobaczyć wcześniej wpisane dane. Aby temu zapobiec, atrybut autocomplete powinien być ustawiany na wartość <span class="text-red">off</span>.</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;input type="text" autocomplete="off" /&#62;
+          </div>
+        </article>
+        <article>
+          <a name="required"><h3>Atrybut required</h3></a>
+          <p>Atrybut <span class="text-red">required</span> jest elementem walidacji formularzy. Służy do sprawdzenia, czy pole zostało wypełnione. Jeżeli formularz nie ma wypełnionego pola, nie zostanie wysłany.</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;input type="text" required /&#62;
+          </div>
+        </article>
+        <article>
+          <a name="pattern"><h3>Atrybut pattern</h3></a>
+          <p>Kolejnym atrybutem przeznaczonym do walidacji formularzy jest <span class="text-red">pattern</span>. Pozwala zdefiniować wyrażenie regularne i sprawdza, czy wartość wprowadzona do pola jest zgodna z zadeklarowanym wyrażeniem.</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;input type="text" name="kod" pattern="[0-9]{2}-[0-9]{3}" /&#62;
+          </div>
+          <p>W podanym przykładzie, aby wprowadzić kod pocztowy, należy wpisać dwie cyfry <span class="text-red">([0-9]{2})</span>, następnie znak minus i na końcu trzy cyfry <span class="text-red">([0-9]{3})</span>.</p>
+        </article>
+      </main>
+      <aside>
+        <div id="right-nav-title">Spis treści</div>
+        <ul>
+          <a href="#autofocus"><li>Atrybut autofocus</li></a>
+          <a href="#autocomplete"><li>Atrybut autocomplete</li></a>
+          <a href="#required"><li>Atrybut required</li></a>
+          <a href="#pattern"><li>Atrybut pattern</li></a>
+        </ul>
+      </aside>
+      <div style="clear: both;"></div>
+      <footer>
+        <a href="https://github.com/robson04" target="_blank"><i class="fab fa-github"></i></a>
+        <br />
+        <p>&copy; 2021 Robson04 - Wszelkie prawa zastrzeżone.</p>
+      </footer>
+    </div>
+  </body>
+</html>

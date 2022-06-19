@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #33333B;
+}
+
+#container {
+  width: 65%;
+  margin: 0 auto;
+}
+
+#container header h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 15px;
+  padding: 10px;
+  font-family: 'Abel', sans-serif;
+  letter-spacing: 4px;
+  color: white;
+  margin-bottom: 15px;
+  font-size: 64px;
+}
+
+#top-nav {
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #B43D3D;
+}
+
+#top-nav ul {
+  padding: 0 10px;
+  text-align: center;
+  list-style-type: none;
+}
+
+#top-nav a {
+  z-index: 0;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 70px;
+  padding: 5px 8px;
+  color: white;
+  transition: all .2s ease-in-out;
+}
+
+#top-nav a:first-of-type {
+  margin-left: 0;
+}
+
+#top-nav a::after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  transition: all .3s cubic-bezier(1,.09,.63,.61);
+}
+
+#top-nav a:hover {
+  color: #3D63B4;
+}
+
+#top-nav a:hover::after {
+  width: 100%;
+  background-color: white;
+}
+
+main {
+  padding: 40px;
+  text-align: justify;
+  background-color: white;
+  width: calc(80% - 40px * 2);
+  float: left;
+}
+
+article p {
+  margin: 8px 0;
+}
+article p:first-of-type {
+  margin-top: 0;
+}
+
+article h3 {
+  margin: 10px 0;
+}
+
+aside {
+  width: calc(20% - 30px);
+  background-color: #3D63B4;
+  float: left;
+  margin-left: 10px;
+  text-align: left;
+  font-size: 13px;
+  padding: 3px 10px;
+  overflow: hidden;
+  color: white;
+}
+
+aside ul {
+  padding: 3px 20px;
+  list-style-type: decimal-leading-zero;
+}
+
+aside a {
+  color: white;
+  text-decoration: none;
+  transition: color .2s ease-in-out;
+}
+
+aside a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+#right-nav-title {
+  text-align: center;
+  margin: 3px 0;
+}
+
+.code {
+  background-color: #F5F5F5;
+  margin: 15px;
+  padding: 20px;
+  position: relative;
+  font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+.code pre {
+  font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+.code span {
+  font-size: 10px;
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+}
+
+.code-explain {
+  margin-left: 35px;
+  font-size: 14px;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-red {
+  color: darkred;
+}
+
+footer {
+  padding: 10px 40px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #3D63B4;
+  width: calc(80% - 40px * 2);
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  margin-left: 10px;
+  transition: color .2s ease;
+}
+footer a:first-of-type {
+  margin-left: 0;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer p {
+  margin-top: 5px;
+}

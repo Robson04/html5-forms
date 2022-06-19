@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Formularze HTML5</title>
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="https://kit.fontawesome.com/45ba32cc64.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="container">
+      <header><h1>Formularze</h1></header>
+      <nav id="top-nav">
+        <ul>
+          <a href="index.html"><li>&#8226; Początek z formularzem</li></a>
+          <a href="formbutton.html"><li>Przyciski i elementy formularza</li></a>
+          <a href="attributes.html"><li>Pozostałe atrybuty</li></a>
+        </ul>
+      </nav>
+      <main>
+        <article>
+          <a name="formularze"><h3>Na co nam formularze?</h3></a>
+          <p>Dzięki formularzom, które mogą być umieszczane bezpośrednio na stronie internetowej, można zbierać informacje od użytkowników witryny. Internauci wypełniają formularz bezpośrednio na stronie - zebrane w ten sposób informacje mogą być przesłane np. pocztą elektroniczną (formularz pocztowy) i po zainstalowaniu specjalnego oprogramowania lub skryptów wykonywanych bezpośrednio w przeglądarce zostać przetworzone na potrzeby właściciela witryny. Formularze mogą służyć do tworzenia ankiet, książek gości, zamawiania towarów czy przesyłania dodatkowych informacji.</p>
+          <p>Formularze mogą zawierać: <span class="text-bold">pola tekstowe, przyciski opcji, pola wyboru, listy rozwijane.</span> W języku HTML istnieje grupa znaczników służacych do projektowania formularzy.</p>
+          <p>Działanie formularza polega na podaniu (na stronie internetowej) informacji przez użytkownika i po naciśnięciu przycisku wysłaniu ich na serwer. Na serwerze dostarczone dane są przetwarzane przez odpowiednie aplikacje, a gdy jest to konieczne, po nawiązaniu połączenia z bazą są zapisywane w bazie danych lub z niej odczytywane. Po odczycie z bazy dane mogą zostać przesłane ponownie do użytkownika strony internetowej.</p>
+        </article>
+        <article>
+          <a name="formularze-znacznik"><h3>Formularz - znacznik &#60;form&#62;</h3></a>
+          <p>Każdy formularz zaczyna się od znacznika otwierającego <span class="text-bold">&#60;form&#62;</span> i kończy się znacznikiem zamykającym <span class="text-bold">&#60;/form&#62;</span> Pomiędzy tymi znacznikami znajdują się wszystkie inne polecenia dotyczące formularza. Podstawowe elementy formularza to pola tekstowe i listy oraz przycisk powodujący wysłanie danych.</p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;form action="" method="" enctype=""&#62;&#60;/form&#62;
+          </div>
+          <ul class="code-explain">
+            <li><span class="text-bold">action="adres"</span> - to najważniejszy atrybut, ponieważ ustala adres, na który będzie wysłany formularz. Jako wartość tego atrybutu można również podać adres poczty albo adres skryptu PHP lub CHI, który zostanie wywołany po zatwierdzeniu formularza. Dane wprowadzone do formularza zostaną przekazane do wybranego skryptu. Dodanie parametru <span class="text-bold">?subject=temat</span> umożliwia podanie tytułu e-maila.</li>
+            <li><span class="text-bold">method="post"</span> - określa sposób (metodę) przekazania informacji do wskazanego skryptu lub na wskazany adres. Może przyjąć jedną z dwóch wartości: <span class="text-red">post</span> lub <span class="text-red">get</span>. Wartością domyślną jest get, ale zaleca się stosowanie metody <span class="text-red">post</span>.</li>
+            <li><span class="text-bold">enctype=""</span> - ustala sposób kodowania przesyłanych danych. Wybierany jest tylko wtedy, gdy formularz przekazywany jest metodą <span class="text-red">post</span>. Dla metody <span class="text-red">get</span> zawsze ma ustawioną wartość <span class="text-bold">"application/x-www-form-urlencoded"</span>. Domyślnie dla metody <span class="text-red">post</span> też przyjmuje wartość <span class="text-bold">"aplication/x-www-form-urlencoded"</span>. Przy przesyłaniu pliku na serwer należy ustawić dla tego atrybutu wartość <span class="text-bold">"multipart/form-data"</span>. Przy wysyłaniu zwykłego formularza atrybut ten można pominąć, natomiast przy wysyłaniu pliku należy nadać atrybutowi wartość <span class="text-bold">"multipart/form-data"</span>. W formularzach pocztowych należy ustawić dla tego atrybutu wartosć <span class="text-bold">"text-plain"</span>.</li>
+          </ul>
+        </article>
+        <article>
+          <a name="formularz-input"><h3>Pole INPUT</h3></a>
+          <p>Pole INPUT jest najważniejszym elementem formularza. Może być wyświetlane w różny sposób w zależności od podanego typu w atrybucie <span class="text-red">type</span>. Jest definiowane przy użyciu znacznika <span class="text-bold">&#60;input /&#62;</span></p>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;input name="" value="" size="" maxlength ="" type="" /&#62;
+          </div>
+          <ul class="code-explain">
+            <li><span class="text-bold">name</span> - określa nazwę danego pola oraz nazwę zmiennej, do której zostanie podstawiona wprowadzona wartość. Każde pole formularza powinno posiadać ten atrybut. Należy zwrócić uwagę na to, aby wartość tego atrybutu była różna dla wszystkich pól formularza.</li>
+            <li><span class="text-bold">value</span> - określa domyślną wartość pola.</li>
+            <li><span class="text-bold">size</span> - określa liczbę znaków mieszczących się w widocznej części pola.</li>
+            <li><span class="text-bold">maxlength</span> - określa maksymalną liczbę znaków, jaką można wpisać do pola.</li>
+            <li><span class="text-bold">type</span> - określa typ pola.</li>
+          </ul>
+          <a name="formularz-typy"><h3>Typy pól</h3></a>
+          <p>Oto przykładowe wartości, jakie może przyjmować atrybut <span class="text-bold">type</span> dla elementu <span class="text-bold">input</span>:</p>
+          <ul class="code-explain">
+            <li><span class="text-bold">type="text"</span> - pole tekstowe.</li>
+            <li><span class="text-bold">type="checkbox"</span> - pole zaznaczenia opcji.</li>
+            <li><span class="text-bold">type="radio"</span> - pole wyboru.</li>
+            <li><span class="text-bold">type="password"</span> - pole wprowadzania hasła.</li>
+            <li><span class="text-bold">type="file"</span> - dołączanie do formularza pliku.</li>
+            <li><span class="text-bold">type="submit"</span> - przycisk.</li>
+            <li><span class="text-bold">type="reset"</span> - przycisk.</li>
+            <li><span class="text-bold">type="hidden"</span> - pole niewidoczne na stronie.</li>
+            <li><span class="text-bold">type="button"</span> - przycisk dowolnego przeznaczenia.</li>
+            <li><span class="text-bold">type="email"</span> - wprowadzanie adresu e-mail.</li>
+          </ul>
+          <br />
+          <a name="formularz-przyklad"><p>Podstawowe przykładowe wykorzystanie formularza:</p></a>
+          <div class="code">
+            <span>Kod HTML</span>
+            &#60;form&#62;
+            <pre>   &#60;input name="pass" type="password" /&#62;</pre>
+            &#60;/form&#62;
+          </div>
+        </article>
+      </main>
+      <aside>
+        <div id="right-nav-title">Spis treści</div>
+        <ul>
+          <a href="#formularze"><li>Na co są formularze?</li></a>
+          <a href="#formularze-znacznik"><li>Tworzenie formularzy</li></a>
+          <a href="#formularz-input"><li>Pole INPUT</li></a>
+          <a href="#formularz-typy"><li>Typy pól</li></a>
+          <a href="#formularz-przyklad"><li>Przykłady zastosowania</li></a>
+        </ul>
+      </aside>
+      <div style="clear: both;"></div>
+      <footer>
+        <a href="https://github.com/robson04" target="_blank"><i class="fab fa-github"></i></a>
+        <br />
+        <p>&copy; 2021 Robson04 - Wszelkie prawa zastrzeżone.</p>
+      </footer>
+    </div>
+  </body>
+</html>
